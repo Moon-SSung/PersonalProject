@@ -1,0 +1,92 @@
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\MS_Project.exe.config
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\MS_Project.exe
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\MS_Project.pdb
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.dll
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.pdb
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.xml
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.Form1.resources
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.Properties.Resources.resources
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CopyComplete
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.exe
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.pdb
+C:\Users\admin\source\repos\MS_Project\MS_Project\bin\Debug\World.xml
+C:\Users\admin\source\repos\MS_Project\MS_Project\obj\Debug\MS_Project.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.exe.config
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.exe
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.pdb
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\World.xml
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.exe
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.pdb
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.dll
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.pdb
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.xml
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.Form1.resources
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.Properties.Resources.resources
+C:\Users\admin\Desktop\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.GenerateResource.Cache
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\World.xml
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.exe.config
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.exe
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\MS_Project.pdb
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.pdb
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.xml
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.pdb
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.xml
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.pdb
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.xml
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csprojAssemblyReference.cache
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.Form1.resources
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.Properties.Resources.resources
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.GenerateResource.cache
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CoreCompileInputs.cache
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CopyComplete
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.exe
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.pdb
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\Interop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\bin\Debug\AxInterop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\Interop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\AxInterop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.ResolveComReference.cache
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\World.xml
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\MS_Project.exe.config
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\MS_Project.exe
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\MS_Project.pdb
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.pdb
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.xml
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.pdb
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.WinForms.xml
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.pdb
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\LiveCharts.Wpf.xml
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\Interop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\bin\Debug\AxInterop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csprojAssemblyReference.cache
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\Interop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\AxInterop.MapWinGIS.dll
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.ResolveComReference.cache
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.FRM_Main.resources
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.Properties.Resources.resources
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.GenerateResource.cache
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CoreCompileInputs.cache
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CopyComplete
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.exe
+C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.pdb
