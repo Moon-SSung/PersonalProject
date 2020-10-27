@@ -90,7 +90,6 @@ C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Pr
 C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CopyComplete
 C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.exe
 C:\프로젝트\개인프로젝트\PersonalProject-master\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.pdb
-C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csprojAssemblyReference.cache
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\Interop.MapWinGIS.dll
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\AxInterop.MapWinGIS.dll
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.ResolveComReference.cache
