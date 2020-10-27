@@ -26,6 +26,9 @@ namespace MS_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            FRM_Login loginForm = new FRM_Login();
+            loginForm.ShowDialog();
+
             openMap();
             ResizeForm();
 

@@ -60,14 +60,25 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRM_Main.Designer.cs">
       <DependentUpon>FRM_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="ini.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_Main.resx">
       <DependentUpon>FRM_Main.cs</DependentUpon>
     </EmbeddedResource>
