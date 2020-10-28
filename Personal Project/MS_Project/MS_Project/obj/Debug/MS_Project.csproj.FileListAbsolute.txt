@@ -116,3 +116,5 @@ C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\bin\De
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\bin\Debug\Interop.MapWinGIS.dll
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\bin\Debug\AxInterop.MapWinGIS.dll
 C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csproj.CopyComplete
+C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.csprojAssemblyReference.cache
+C:\프로젝트\개인프로젝트\Personal Project\MS_Project\MS_Project\obj\Debug\MS_Project.FRM_SignUp.resources

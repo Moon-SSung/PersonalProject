@@ -62,12 +62,13 @@
             // Btn_Close
             // 
             this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Close.BackColor = System.Drawing.Color.Red;
             this.Btn_Close.Location = new System.Drawing.Point(987, 3);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(30, 30);
             this.Btn_Close.TabIndex = 5;
             this.Btn_Close.Text = "X";
-            this.Btn_Close.UseVisualStyleBackColor = true;
+            this.Btn_Close.UseVisualStyleBackColor = false;
             this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
             // pictureBox1
@@ -153,7 +154,7 @@
             this.Pnl_Main.Size = new System.Drawing.Size(820, 476);
             this.Pnl_Main.TabIndex = 7;
             // 
-            // Form1
+            // FRM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +164,7 @@
             this.Controls.Add(this.Nav_Top);
             this.Controls.Add(this.Nav_Bottom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "FRM_Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Nav_Top.ResumeLayout(false);

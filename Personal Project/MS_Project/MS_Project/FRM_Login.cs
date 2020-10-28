@@ -19,27 +19,31 @@ namespace MS_Project
             InitializeComponent();
         }
 
-        
+        FRM_SignUp signupForm = new FRM_SignUp();
 
         private void FRM_Login_Load(object sender, EventArgs e)
         {
             Tbx_ID.Focus();
-
         }
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(Tbx_ID.Text) || String.IsNullOrEmpty(Tbx_PW.Text))
+            if (string.IsNullOrEmpty(Tbx_ID.Text) || string.IsNullOrEmpty(Tbx_PW.Text))
             {
-                MessageBox.Show("ID와 PW를 입력해주세요.","로그인 실패");
+                MessageBox.Show("ID와 PW를 입력해주세요.", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             LoginProcess();
         }
 
+        private void Btn_SignUp_Click(object sender, EventArgs e)
+        {
+            signupForm.ShowDialog();
+        }
+
+        #region 로그인할 때, ID와 PW를 체킹한다.
         private void LoginProcess()
         {
-            string strUserID = string.Empty;
             try
             {
                 using (SqlConnection conn = new SqlConnection(DBConnect.GetConString()))
@@ -47,41 +51,59 @@ namespace MS_Project
                     conn.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = conn;
-                    cmd.CommandText = "SELECT User_ID, User_PW FROM TB_USER " +
-                                      " WHERE User_ID = @User_ID " + 
-                                      " AND User_PW = @User_PW ";
+                    cmd.CommandText = "SELECT User_PW FROM TB_USER " +
+                                      " WHERE User_ID = @User_ID ";
 
                     //User_ID
                     SqlParameter parmID = new SqlParameter("@User_ID", SqlDbType.VarChar, 50);
                     parmID.Value = Tbx_ID.Text;
                     cmd.Parameters.Add(parmID);
-                    //User_PW
-                    SqlParameter parmPW = new SqlParameter("@User_PW", SqlDbType.VarChar, 50);
-                    parmPW.Value = Tbx_PW.Text;
-                    cmd.Parameters.Add(parmPW);
+
+                    ////User_PW
+                    //SqlParameter parmPW = new SqlParameter("@User_PW", SqlDbType.VarChar, 50);
+                    //parmPW.Value = Tbx_PW.Text;
+                    //cmd.Parameters.Add(parmPW);
 
                     SqlDataReader reader = cmd.ExecuteReader();
-                    reader.Read();
-                    strUserID = ( reader["User_ID"] != null ? reader["User_ID"].ToString() : "" ); 
-
-                    if(strUserID != "")
+                    
+                    if (reader.HasRows == true)
                     {
-                        MessageBox.Show(this, "접속성공", "로그인");
-                        this.Close();
+                        reader.Read();
+                        
+                        if(reader[0].ToString() == Tbx_PW.Text)
+                        {
+                            MessageBox.Show(this, "접속성공", "로그인");
+
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(this, "비밀번호 틀림", "로그인 실패");
+                            return;
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(this,"접속실패", "로그인 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (MessageBox.Show("없는 ID 회원가입?", "ID 없음", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            signupForm.ShowDialog();
+                            return;
+                        }
+                        else
+                        {
+                            return;
+                        }                   
                     }
                 }
-                
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(this, $"ERROR : {e.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
+        #endregion
 
+        #region 엔터 키 작동
         private void Tbx_ID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == 13)
@@ -97,5 +119,45 @@ namespace MS_Project
                 LoginProcess();
             }
         }
+        #endregion
+
+        #region 프로그램 종료 버튼 처리
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            //if(MessageBox.Show("종료하시겠습니까?","종료 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //{
+            //    this.DialogResult = DialogResult.Abort;                
+            //    Application.Exit();
+            //}
+
+            this.DialogResult = DialogResult.Abort;
+            Application.Exit();
+        }
+        #endregion
+
+        #region Form 마우스 이동
+        bool TagMove;
+        int MValX, MValY;
+        private void Nav_Top_MouseDown(object sender, MouseEventArgs e)
+        {
+            TagMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+        private void Nav_Top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TagMove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+
+
+        private void Nav_Top_MouseUp(object sender, MouseEventArgs e)
+        {
+            TagMove = false;
+        }
+        #endregion
     }
 }

@@ -76,11 +76,20 @@
     <Compile Include="Common\ini.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FRM_SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SignUp.Designer.cs">
+      <DependentUpon>FRM_SignUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FRM_Login.resx">
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Main.resx">
       <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SignUp.resx">
+      <DependentUpon>FRM_SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
