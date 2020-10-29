@@ -21,6 +21,9 @@ namespace MS_Project
         //public const string Param_DB_ID = "DatabaseID";
         //public const string Param_DB_PW = "DatabasePW";
 
+        public static string sqlMode = "";
+
+
         public static string GetConString()
         {
             IniFile iniFile = new IniFile();

@@ -38,6 +38,7 @@ namespace MS_Project
 
         private void Btn_SignUp_Click(object sender, EventArgs e)
         {
+            DBConnect.sqlMode = "INSERT";
             signupForm.ShowDialog();
         }
 
@@ -51,13 +52,13 @@ namespace MS_Project
                     conn.Open();
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = conn;
-                    cmd.CommandText = "SELECT User_PW FROM TB_USER " +
+                    cmd.CommandText = "SELECT User_PW FROM TB_User " +
                                       " WHERE User_ID = @User_ID ";
 
                     //User_ID
-                    SqlParameter parmID = new SqlParameter("@User_ID", SqlDbType.VarChar, 50);
-                    parmID.Value = Tbx_ID.Text;
-                    cmd.Parameters.Add(parmID);
+                    SqlParameter paramID = new SqlParameter("@User_ID", SqlDbType.VarChar, 50);
+                    paramID.Value = Tbx_ID.Text;
+                    cmd.Parameters.Add(paramID);
 
                     ////User_PW
                     //SqlParameter parmPW = new SqlParameter("@User_PW", SqlDbType.VarChar, 50);
