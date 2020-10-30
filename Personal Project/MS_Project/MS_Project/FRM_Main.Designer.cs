@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.Nav_Top = new System.Windows.Forms.Panel();
+            this.Btn_sizeMin = new System.Windows.Forms.Button();
+            this.Btn_sizeMax = new System.Windows.Forms.Button();
             this.Btn_Close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nav_Bottom = new System.Windows.Forms.Panel();
             this.Nav_Side = new System.Windows.Forms.Panel();
+            this.Btn_Logout = new System.Windows.Forms.Button();
             this.Btn_Back = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -48,22 +51,53 @@
             // Nav_Top
             // 
             this.Nav_Top.BackColor = System.Drawing.SystemColors.Control;
+            this.Nav_Top.Controls.Add(this.Btn_sizeMin);
+            this.Nav_Top.Controls.Add(this.Btn_sizeMax);
             this.Nav_Top.Controls.Add(this.Btn_Close);
             this.Nav_Top.Controls.Add(this.pictureBox1);
             this.Nav_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.Nav_Top.Location = new System.Drawing.Point(0, 0);
             this.Nav_Top.Name = "Nav_Top";
-            this.Nav_Top.Size = new System.Drawing.Size(1020, 36);
+            this.Nav_Top.Size = new System.Drawing.Size(1280, 36);
             this.Nav_Top.TabIndex = 2;
             this.Nav_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Nav_Top_MouseDown);
             this.Nav_Top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Nav_Top_MouseMove);
             this.Nav_Top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Nav_Top_MouseUp);
             // 
+            // Btn_sizeMin
+            // 
+            this.Btn_sizeMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_sizeMin.BackColor = System.Drawing.Color.White;
+            this.Btn_sizeMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_sizeMin.Location = new System.Drawing.Point(1175, 3);
+            this.Btn_sizeMin.Name = "Btn_sizeMin";
+            this.Btn_sizeMin.Size = new System.Drawing.Size(30, 30);
+            this.Btn_sizeMin.TabIndex = 8;
+            this.Btn_sizeMin.Text = "-";
+            this.Btn_sizeMin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Btn_sizeMin.UseVisualStyleBackColor = false;
+            this.Btn_sizeMin.Click += new System.EventHandler(this.Btn_sizeMin_Click);
+            // 
+            // Btn_sizeMax
+            // 
+            this.Btn_sizeMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_sizeMax.BackColor = System.Drawing.Color.White;
+            this.Btn_sizeMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_sizeMax.ForeColor = System.Drawing.Color.Black;
+            this.Btn_sizeMax.Location = new System.Drawing.Point(1211, 3);
+            this.Btn_sizeMax.Name = "Btn_sizeMax";
+            this.Btn_sizeMax.Size = new System.Drawing.Size(30, 30);
+            this.Btn_sizeMax.TabIndex = 7;
+            this.Btn_sizeMax.Text = "□";
+            this.Btn_sizeMax.UseVisualStyleBackColor = false;
+            this.Btn_sizeMax.Click += new System.EventHandler(this.Btn_sizeMax_Click);
+            // 
             // Btn_Close
             // 
             this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Close.BackColor = System.Drawing.Color.Red;
-            this.Btn_Close.Location = new System.Drawing.Point(987, 3);
+            this.Btn_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Close.Location = new System.Drawing.Point(1247, 3);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(30, 30);
             this.Btn_Close.TabIndex = 5;
@@ -84,13 +118,14 @@
             // 
             this.Nav_Bottom.BackColor = System.Drawing.SystemColors.Control;
             this.Nav_Bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Nav_Bottom.Location = new System.Drawing.Point(0, 512);
+            this.Nav_Bottom.Location = new System.Drawing.Point(0, 771);
             this.Nav_Bottom.Name = "Nav_Bottom";
-            this.Nav_Bottom.Size = new System.Drawing.Size(1020, 29);
+            this.Nav_Bottom.Size = new System.Drawing.Size(1280, 29);
             this.Nav_Bottom.TabIndex = 4;
             // 
             // Nav_Side
             // 
+            this.Nav_Side.Controls.Add(this.Btn_Logout);
             this.Nav_Side.Controls.Add(this.Btn_Back);
             this.Nav_Side.Controls.Add(this.listBox);
             this.Nav_Side.Controls.Add(this.trackBar1);
@@ -99,8 +134,18 @@
             this.Nav_Side.Dock = System.Windows.Forms.DockStyle.Left;
             this.Nav_Side.Location = new System.Drawing.Point(0, 36);
             this.Nav_Side.Name = "Nav_Side";
-            this.Nav_Side.Size = new System.Drawing.Size(200, 476);
+            this.Nav_Side.Size = new System.Drawing.Size(200, 735);
             this.Nav_Side.TabIndex = 6;
+            // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.Location = new System.Drawing.Point(12, 690);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(171, 39);
+            this.Btn_Logout.TabIndex = 0;
+            this.Btn_Logout.Text = "로그아웃";
+            this.Btn_Logout.UseVisualStyleBackColor = true;
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
             // 
             // Btn_Back
             // 
@@ -148,17 +193,17 @@
             // 
             // Pnl_Main
             // 
-            this.Pnl_Main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_Main.Location = new System.Drawing.Point(200, 36);
+            this.Pnl_Main.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Pnl_Main.Location = new System.Drawing.Point(206, 42);
             this.Pnl_Main.Name = "Pnl_Main";
-            this.Pnl_Main.Size = new System.Drawing.Size(820, 476);
+            this.Pnl_Main.Size = new System.Drawing.Size(566, 320);
             this.Pnl_Main.TabIndex = 7;
             // 
             // FRM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 541);
+            this.ClientSize = new System.Drawing.Size(1280, 800);
             this.Controls.Add(this.Pnl_Main);
             this.Controls.Add(this.Nav_Side);
             this.Controls.Add(this.Nav_Top);
@@ -185,9 +230,12 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Button Btn_ZoomOut;
         private System.Windows.Forms.Button Btn_ZoomIn;
-        private System.Windows.Forms.Panel Pnl_Main;
         private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.Button Btn_Back;
+        private System.Windows.Forms.Button Btn_Logout;
+        private System.Windows.Forms.Panel Pnl_Main;
+        private System.Windows.Forms.Button Btn_sizeMin;
+        private System.Windows.Forms.Button Btn_sizeMax;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using LiveCharts.Maps;
 using LiveCharts.WinForms;
+using MS_Project.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +12,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Windows.Media.TextFormatting;
 
 namespace MS_Project
 {
     public partial class FRM_Main : Form
     {
-        GeoMap geoMap;
+        GeoMap geoMap { get; set; }
+        FRM_Login loginForm = new FRM_Login();
+
         Dictionary<string, string> FileList = new Dictionary<string, string>();
 
         public FRM_Main()
@@ -26,11 +30,12 @@ namespace MS_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FRM_Login loginForm = new FRM_Login();
+            //FRM_Login loginForm = new FRM_Login();
             loginForm.ShowDialog();
 
             openMap();
-            ResizeForm();
+            SetResizeForm();
+            AllClear();
 
             FileList["KR"] = "South Korea";
             FileList["US"] = "United States of America";
@@ -39,19 +44,37 @@ namespace MS_Project
             FileList["FR"] = "France";
             FileList["RU"] = "Russia";
             //test
+
+            
+        }
+
+        private void AllClear()
+        {
+            //Text
+            Btn_sizeMax.Text = "";
+            Btn_sizeMin.Text = "";
+            Btn_Close.Text = "";
+
+            //BackColor
+            Btn_sizeMax.BackColor = Color.Transparent;
+            Btn_sizeMin.BackColor = Color.Transparent;
+            Btn_Close.BackColor = Color.Transparent;
+
         }
 
 
         private void openMap()
-        {       
+        {
             ////Form 크기 변경시, 다시 그리기
-            this.ResizeRedraw = true;       
-            
+            this.ResizeRedraw = true;
+            this.Pnl_Main.Dock = DockStyle.Fill;
+
             ////지도 생성
             geoMap = new GeoMap();
             geoMap.Source = $@"{Application.StartupPath}\Maps\World.xml";
             geoMap.LandClick += GeoMap_Click;
             Pnl_Main.Controls.Add(geoMap);
+            //this.Controls.Add(geoMap);
             geoMap.Dock = DockStyle.Fill;
         }
 
@@ -72,6 +95,7 @@ namespace MS_Project
                 geoMap.Source = $@"{Application.StartupPath}\Maps\{FileList[data.Id]}.xml";
                 geoMap.LandClick += Sub_GeoMap_Click;
                 Pnl_Main.Controls.Add(geoMap);
+                //this.Controls.Add(geoMap);
                 geoMap.Dock = DockStyle.Fill;
             }
         }
@@ -94,14 +118,31 @@ namespace MS_Project
         #endregion
 
 
-        private void ResizeForm()
+        private void Btn_Logout_Click(object sender, EventArgs e)
         {
-            ////창 크기에 맞게 반응
-            this.MinimumSize = new Size(1280, 800);
+            if (MessageBox.Show("정말 로그아웃 하시겠습니까?", "로그아웃", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                loginForm.Show();
+            }
+        }
+
+        private void SetResizeForm()
+        {
+            //// ini 파일 설정 창 크기에 맞게 반응
+            IniFile ini = new IniFile();
+            ini.Load(IniData.SettingIniFile);
+            IniSection equipSect = ini["Equipment"];
+
+            this.Location = new Point(this.Left, 0);
+            this.Size = new Size(equipSect["Width"].ToInt(), equipSect["Height"].ToInt());
+
             GeoMap geoMap = new GeoMap();
             geoMap.Anchor = AnchorStyles.Top;
             geoMap.Dock = DockStyle.None;
         }
+        
+
 
         private void ResultListBox(MapData data)
         {
@@ -110,7 +151,32 @@ namespace MS_Project
             listBox.SelectedIndex = -1;
         }
 
-        #region 프로그램 종료 버튼 처리
+        #region --- 네비게이션 버튼
+
+        private void Btn_sizeMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        public static bool sizeState;
+
+        private void Btn_sizeMax_Click(object sender, EventArgs e)
+        {
+            if(sizeState == false) // 창크기가 일반일 때
+            {
+                this.WindowState = FormWindowState.Maximized;
+                // 일반 모양으로 변경
+                Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("normal-size.png")), Btn_sizeMax.Size);
+                sizeState = true;
+            }
+            else // 창크기가 최대화 일때 (sizeStatus == true)
+            {
+                this.WindowState = FormWindowState.Normal;
+                // 최대화 모양으로 변경
+                sizeState = false;
+            }
+        }
+
         private void Btn_Close_Click(object sender, EventArgs e)
         {
             //if(MessageBox.Show("종료하시겠습니까?","종료 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -140,6 +206,8 @@ namespace MS_Project
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
         }
+
+
 
         private void Nav_Top_MouseUp(object sender, MouseEventArgs e)
         {

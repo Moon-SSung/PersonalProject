@@ -23,7 +23,8 @@ namespace MS_Project
 
         private void FRM_Login_Load(object sender, EventArgs e)
         {
-            Tbx_ID.Focus();
+            Reset();
+            //Tbx_ID.Focus();
         }
 
         private void Btn_Login_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace MS_Project
                 return;
             }
             LoginProcess();
+            
         }
 
         private void Btn_SignUp_Click(object sender, EventArgs e)
@@ -74,7 +76,7 @@ namespace MS_Project
                         if(reader[0].ToString() == Tbx_PW.Text)
                         {
                             MessageBox.Show(this, "접속성공", "로그인");
-
+                            Reset();
                             this.Close();
                         }
                         else
@@ -100,6 +102,20 @@ namespace MS_Project
             catch (Exception e)
             {
                 MessageBox.Show(this, $"ERROR : {e.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reset()
+        {
+            if(Tbx_ID.Text != "" || Tbx_PW.Text != "")
+            {
+                Tbx_ID.Text = Tbx_PW.Text = "";
+                Tbx_ID.Focus();
+            }
+            else
+            {
+                Tbx_ID.Focus();
+                return;
             }
         }
         #endregion

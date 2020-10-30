@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\DBConnect.cs" />
+    <Compile Include="Common\ImageSet.cs" />
     <Compile Include="FRM_Login.cs">
       <SubType>Form</SubType>
     </Compile>

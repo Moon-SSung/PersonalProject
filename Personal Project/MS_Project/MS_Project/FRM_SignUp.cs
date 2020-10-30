@@ -84,7 +84,7 @@ namespace MS_Project
                     MessageBox.Show(this, "입력되지 않은 값이 있습니다!\n빈칸을 입력해주세요.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;     
             }
-            if (yn==false)//중복확인 N
+            if (yn==false)//중복확인 N55
             {
                 MessageBox.Show(this, "아이디 중복확인을 해주세요..", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
