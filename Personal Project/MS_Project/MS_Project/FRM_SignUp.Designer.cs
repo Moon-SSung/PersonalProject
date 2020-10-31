@@ -109,6 +109,7 @@
             this.Tbx_ID.Name = "Tbx_ID";
             this.Tbx_ID.Size = new System.Drawing.Size(275, 36);
             this.Tbx_ID.TabIndex = 1;
+            this.Tbx_ID.TextChanged += new System.EventHandler(this.Tbx_ID_TextChanged);
             // 
             // Lbl_PW
             // 

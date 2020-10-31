@@ -19,9 +19,12 @@ namespace MS_Project
     public partial class FRM_Main : Form
     {
         GeoMap geoMap { get; set; }
+        MapData md { get; set; }
         FRM_Login loginForm = new FRM_Login();
 
         Dictionary<string, string> FileList = new Dictionary<string, string>();
+        AutoCompleteStringCollection source = new AutoCompleteStringCollection();
+
 
         public FRM_Main()
         {
@@ -36,16 +39,29 @@ namespace MS_Project
             openMap();
             SetResizeForm();
             AllClear();
+            SetLayout();
 
+            //FileList[md.Id] = FileList[md.Name];
             FileList["KR"] = "South Korea";
             FileList["US"] = "United States of America";
-            FileList["AU"] = "Austria";
+            FileList["AU"] = "Australia";
             FileList["CA"] = "Canada";
             FileList["FR"] = "France";
             FileList["RU"] = "Russia";
             //test
+        }
 
-            
+        private void Tbx_Search_TextChanged(object sender, EventArgs e)
+        {
+            source.AddRange(FileList.Values.ToArray());
+            Tbx_Search.AutoCompleteCustomSource = source;
+            Tbx_Search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            Tbx_Search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            //source.AddRange(FileList.Values.ToArray());
+            //Cbx_Search.AutoCompleteCustomSource = source;
+            //Cbx_Search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //Cbx_Search.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
         private void AllClear()
@@ -97,6 +113,9 @@ namespace MS_Project
                 Pnl_Main.Controls.Add(geoMap);
                 //this.Controls.Add(geoMap);
                 geoMap.Dock = DockStyle.Fill;
+
+
+                
             }
         }
 
@@ -142,7 +161,13 @@ namespace MS_Project
             geoMap.Dock = DockStyle.None;
         }
         
+        private void SetLayout()
+        {
+            Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("full-size.png")), Btn_sizeMax.Size);
+            Btn_sizeMin.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("min-size2.png")), Btn_sizeMax.Size);
+            Btn_Close.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("close.png")), Btn_sizeMax.Size);
 
+        }
 
         private void ResultListBox(MapData data)
         {
@@ -165,14 +190,17 @@ namespace MS_Project
             if(sizeState == false) // 창크기가 일반일 때
             {
                 this.WindowState = FormWindowState.Maximized;
-                // 일반 모양으로 변경
+                // 최대화 모양으로 변경
+               // Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("full-size.png")), Btn_sizeMax.Size);
                 Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("normal-size.png")), Btn_sizeMax.Size);
                 sizeState = true;
             }
             else // 창크기가 최대화 일때 (sizeStatus == true)
             {
                 this.WindowState = FormWindowState.Normal;
-                // 최대화 모양으로 변경
+                // 일반 모양으로 변경
+               // Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("normal-size.png")), Btn_sizeMax.Size);
+                Btn_sizeMax.BackgroundImage = new Bitmap(Image.FromFile(ImageSet.SetNavImage("full-size.png")), Btn_sizeMax.Size);
                 sizeState = false;
             }
         }
@@ -206,7 +234,6 @@ namespace MS_Project
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
         }
-
 
 
         private void Nav_Top_MouseUp(object sender, MouseEventArgs e)

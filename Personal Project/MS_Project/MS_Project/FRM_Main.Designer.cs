@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nav_Bottom = new System.Windows.Forms.Panel();
             this.Nav_Side = new System.Windows.Forms.Panel();
+            this.Cbx_Search = new System.Windows.Forms.ComboBox();
+            this.Tbx_Search = new System.Windows.Forms.TextBox();
             this.Btn_Logout = new System.Windows.Forms.Button();
             this.Btn_Back = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
@@ -74,7 +76,6 @@
             this.Btn_sizeMin.Size = new System.Drawing.Size(30, 30);
             this.Btn_sizeMin.TabIndex = 8;
             this.Btn_sizeMin.Text = "-";
-            this.Btn_sizeMin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_sizeMin.UseVisualStyleBackColor = false;
             this.Btn_sizeMin.Click += new System.EventHandler(this.Btn_sizeMin_Click);
             // 
@@ -125,6 +126,8 @@
             // 
             // Nav_Side
             // 
+            this.Nav_Side.Controls.Add(this.Cbx_Search);
+            this.Nav_Side.Controls.Add(this.Tbx_Search);
             this.Nav_Side.Controls.Add(this.Btn_Logout);
             this.Nav_Side.Controls.Add(this.Btn_Back);
             this.Nav_Side.Controls.Add(this.listBox);
@@ -137,8 +140,25 @@
             this.Nav_Side.Size = new System.Drawing.Size(200, 735);
             this.Nav_Side.TabIndex = 6;
             // 
+            // Cbx_Search
+            // 
+            this.Cbx_Search.FormattingEnabled = true;
+            this.Cbx_Search.Location = new System.Drawing.Point(12, 449);
+            this.Cbx_Search.Name = "Cbx_Search";
+            this.Cbx_Search.Size = new System.Drawing.Size(171, 23);
+            this.Cbx_Search.TabIndex = 8;
+            // 
+            // Tbx_Search
+            // 
+            this.Tbx_Search.Location = new System.Drawing.Point(12, 418);
+            this.Tbx_Search.Name = "Tbx_Search";
+            this.Tbx_Search.Size = new System.Drawing.Size(171, 25);
+            this.Tbx_Search.TabIndex = 8;
+            this.Tbx_Search.TextChanged += new System.EventHandler(this.Tbx_Search_TextChanged);
+            // 
             // Btn_Logout
             // 
+            this.Btn_Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Btn_Logout.Location = new System.Drawing.Point(12, 690);
             this.Btn_Logout.Name = "Btn_Logout";
             this.Btn_Logout.Size = new System.Drawing.Size(171, 39);
@@ -236,6 +256,8 @@
         private System.Windows.Forms.Panel Pnl_Main;
         private System.Windows.Forms.Button Btn_sizeMin;
         private System.Windows.Forms.Button Btn_sizeMax;
+        private System.Windows.Forms.TextBox Tbx_Search;
+        private System.Windows.Forms.ComboBox Cbx_Search;
     }
 }
 

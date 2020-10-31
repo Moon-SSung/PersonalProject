@@ -13,7 +13,7 @@ namespace MS_Project
 {
     public partial class FRM_SignUp : Form
     {
-        private bool yn = false;
+        private bool CheckID = false;
 
         public FRM_SignUp()
         {
@@ -59,11 +59,16 @@ namespace MS_Project
                     {
                         MessageBox.Show(this, "가능한 아이디");
                         Tbx_PW.Focus();
-                        yn = true;
+                        CheckID = true;
                         return;
                     }
                 }
             }
+        }
+
+        private void Tbx_ID_TextChanged(object sender, EventArgs e)
+        {
+            CheckID = false;
         }
         #endregion
 
@@ -81,22 +86,20 @@ namespace MS_Project
                 string.IsNullOrEmpty(Tbx_Mobile.Text)
                 )
             {          
-                    MessageBox.Show(this, "입력되지 않은 값이 있습니다!\n빈칸을 입력해주세요.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;     
+                MessageBox.Show(this, "입력되지 않은 값이 있습니다!\n빈칸을 입력해주세요.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;     
             }
-            if (yn==false)//중복확인 N55
+
+            if (CheckID == false)//중복확인 N55
             {
                 MessageBox.Show(this, "아이디 중복확인을 해주세요..", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            yn = false;
             SignUpProcess();            
         }
 
         private void SignUpProcess()
         {
-            MessageBox.Show(this, "SignProcessTest");
-
             string sqlQuery = "";
 
             using (SqlConnection conn = new SqlConnection(DBConnect.GetConString()))
@@ -140,11 +143,17 @@ namespace MS_Project
                 SqlParameter paramMobile = new SqlParameter("@User_Mobile", SqlDbType.VarChar, 20);
                 paramMobile.Value = Tbx_Mobile.Text;
                 cmd.Parameters.Add(paramMobile);
-                
+
                 cmd.ExecuteNonQuery();
-            }
+                MessageBox.Show(this, "SignProcessTest");
+
                 ClearTextControl();
+                this.Close();
+            }
+            //ClearTextControl();
         }
+
+
 
         #region 입력값 초기화
         private void ClearTextControl()
@@ -184,7 +193,6 @@ namespace MS_Project
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
         }
-
 
         private void Nav_Top_MouseUp(object sender, MouseEventArgs e)
         {
